@@ -7,7 +7,7 @@ using namespace std;
  * Parses args and store those in the problem data struct
  */
 void arg_parser(int argc, char *argv[], string* f_name, p_data* pd) {
-    regex alg_rgx("(evol|gbj)");
+    regex alg_rgx("(evol|bt)");
     smatch matches;
     string alg_name;
 

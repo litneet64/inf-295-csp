@@ -1,5 +1,5 @@
-#ifndef GBJ_STRUCTS_H
-#define GBJ_STRUCTS_H
+#ifndef BT_STRUCTS_H
+#define BT_STRUCTS_H
 
 /*
  * define structure for a variable

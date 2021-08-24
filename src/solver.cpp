@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
       sol = evol_algorithm.solve();
       t_end = chrono::high_resolution_clock::now();
     } else {
-      GBJ graph_bj(&pd, &score);
+      BT graph_bj(&pd, &score);
 
       t_start = chrono::high_resolution_clock::now();
       sol = graph_bj.solve();

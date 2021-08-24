@@ -1,4 +1,4 @@
-#include "gbj.hpp"
+#include "bt.hpp"
 
 using namespace std;
 
@@ -6,7 +6,7 @@ using namespace std;
 /*
  * Class constructor
  */
-GBJ::GBJ(p_data* pd_, Score* score){
+BT::BT(p_data* pd_, Score* score){
   int tmp_v;
   int tmp_t = 0;
 
@@ -29,7 +29,7 @@ GBJ::GBJ(p_data* pd_, Score* score){
 /*
  * main engine for graph backjumping algorithm (actually just backtracking for this problem)
  */
-int* GBJ::solve() {
+int* BT::solve() {
   variable var_ls[pd->n_cars];
   variable* tmp_tree[pd->n_cars];
   int tmp_domains[pd->n_cars][pd->n_cars];
@@ -86,7 +86,7 @@ int* GBJ::solve() {
 /*
  * check if current instantiations violate any ratio-related constraint
  */
-bool GBJ::violates_ratio_constraint(variable** tree_seq, int t_2) {
+bool BT::violates_ratio_constraint(variable** tree_seq, int t_2) {
   int opt_c, win_len;
 
   for (int k = 0; k < pd->n_opts; k++) {
@@ -115,7 +115,7 @@ bool GBJ::violates_ratio_constraint(variable** tree_seq, int t_2) {
 /*
  * check if current instantiation violate any demand-related constraint
  */
-bool GBJ::violates_dv_constraint(variable** tree_seq, int t_2) {
+bool BT::violates_dv_constraint(variable** tree_seq, int t_2) {
   int type_c;
 
   // check if demand for a given class has been surpassed
