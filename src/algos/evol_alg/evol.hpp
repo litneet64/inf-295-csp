@@ -13,9 +13,9 @@ class EA {
     p_data* pd;
     Score* score;
     solution* curr_best_sol;
-    const float mutation_p = 0.1;
+    const float mutation_p = 0.5;
     const float mutation_op_p = 0.6;
-    const int n_sols = 260;
+    const int n_sols = 300;
     const int n_child = static_cast<int>(ceil(n_sols * 0.6));
 
   public:
